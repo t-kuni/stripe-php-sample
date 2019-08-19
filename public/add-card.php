@@ -12,7 +12,6 @@ $secretKey = getenv('STRIPE_SECRET_KEY');
 $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 \Stripe\Stripe::setApiKey($secretKey);
-
 ?>
 
 <script src="https://js.stripe.com/v3/"></script>
@@ -20,16 +19,15 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 <form action="/action/save-card.php" method="post" id="payment-form">
     <div class="form-row">
         <div>
-            <label for="name">名前</label>
-            <input type="text" id="name" name="name" placeholder="田中　太郎" />
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="email@example.com" />
+            <label for="customer-id">顧客ID</label>
+            <input type="text" id="customer-id" name="customer-id" placeholder="xxxx" />
         </div>
         <label for="card-element">
             Credit or debit card
         </label>
+
+        <!-- TODO: ここ実装中！！！！！ -->
+
         <div id="card-element">
             <!-- A Stripe Element will be inserted here. -->
         </div>

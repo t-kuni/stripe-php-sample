@@ -13,28 +13,6 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 \Stripe\Stripe::setApiKey($secretKey);
 
-// Create a Customer:
-$customer = \Stripe\Customer::create([
-    'source' => 'tok_mastercard',
-    'email' => 'vartkg+1@gmail.com',
-]);
-
-// Charge the Customer instead of the card:
-$charge = \Stripe\Charge::create([
-    'amount' => 1000,
-    'currency' => 'usd',
-    'customer' => $customer->id,
-]);
-
-// YOUR CODE: Save the customer ID and other info in a database for later.
-
-// When it's time to charge the customer again, retrieve the customer ID.
-//$charge = \Stripe\Charge::create([
-//    'amount' => 1500, // $15.00 this time
-//    'currency' => 'usd',
-//    'customer' => $customer_id, // Previously stored, then retrieved
-//]);
-
 ?>
 
 <script src="https://js.stripe.com/v3/"></script>
