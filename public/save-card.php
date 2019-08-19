@@ -42,6 +42,10 @@ $charge = \Stripe\Charge::create([
 <form action="/action/save-card.php" method="post" id="payment-form">
     <div class="form-row">
         <div>
+            <label for="name">名前</label>
+            <input type="text" id="name" name="name" placeholder="田中　太郎" />
+        </div>
+        <div>
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="email@example.com" />
         </div>

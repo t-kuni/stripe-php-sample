@@ -32,3 +32,7 @@ $charge = \Stripe\Charge::create([
 </pre>
 
 <h1></h1>
+
+<div>
+    <a href="/index.php">トップへ戻る</a>
+</div>

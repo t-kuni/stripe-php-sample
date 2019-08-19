@@ -15,10 +15,12 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 $token = $_POST['stripeToken'];
 $email = $_POST['email'];
+$name  = $_POST['name'];
 
 $customer = \Stripe\Customer::create([
     'source' => $token,
-    'email' => $email,
+    'email'  => $email,
+    'name'   => $name,
 ]);
 ?>
 
@@ -31,3 +33,7 @@ $customer = \Stripe\Customer::create([
 <pre>
     <?php var_dump($customer) ?>
 </pre>
+
+<div>
+    <a href="/index.php">トップへ戻る</a>
+</div>
