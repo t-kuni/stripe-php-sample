@@ -22,3 +22,6 @@ require_once('../vendor/autoload.php');
 <div>
     <a href="card-list.php">カード一覧</a>
 </div>
+<div>
+    <a href="add-card.php">カード追加</a>
+</div>

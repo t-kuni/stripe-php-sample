@@ -16,7 +16,7 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 <script src="https://js.stripe.com/v3/"></script>
 
-<form action="/action/save-card.php" method="post" id="payment-form">
+<form action="/action/add-card.php" method="post" id="payment-form">
     <div class="form-row">
         <div>
             <label for="customer-id">顧客ID</label>
@@ -25,8 +25,6 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
         <label for="card-element">
             Credit or debit card
         </label>
-
-        <!-- TODO: ここ実装中！！！！！ -->
 
         <div id="card-element">
             <!-- A Stripe Element will be inserted here. -->
