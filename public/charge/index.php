@@ -3,9 +3,9 @@
  * クレカ情報を保存する
  */
 
-require_once('../vendor/autoload.php');
+require_once('../../vendor/autoload.php');
 
-$dotenv = Dotenv\Dotenv::create('../');
+$dotenv = Dotenv\Dotenv::create('../../');
 $dotenv->load();
 
 $secretKey = getenv('STRIPE_SECRET_KEY');
@@ -17,7 +17,9 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 <script src="https://js.stripe.com/v3/"></script>
 
-<form action="/action/charge.php" method="post" id="payment-form">
+<h1>Checkoutを用いた決済</h1>
+
+<form action="/charge/action.php" method="post" id="payment-form">
     <div class="form-row">
         <label for="card-element">
             Credit or debit card

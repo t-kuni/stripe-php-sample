@@ -3,9 +3,9 @@
  * クレカ情報を保存する
  */
 
-require_once('../vendor/autoload.php');
+require_once('../../vendor/autoload.php');
 
-$dotenv = Dotenv\Dotenv::create('../');
+$dotenv = Dotenv\Dotenv::create('../../');
 $dotenv->load();
 
 $secretKey = getenv('STRIPE_SECRET_KEY');
