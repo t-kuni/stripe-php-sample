@@ -6,7 +6,7 @@ server {
     ssl_certificate_key /etc/nginx/conf.d/certs/server.key;
 
     server_name ${HOST};
-    root /var/www/html/public;
+    root /var/www/html/src;
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-XSS-Protection "1; mode=block";
