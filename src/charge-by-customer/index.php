@@ -17,9 +17,9 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 <script src="https://js.stripe.com/v3/"></script>
 
-<h1>顧客IDを元に決済します</h1>
+<h1>顧客IDを元に決済(Charge)</h1>
 
-<form action="/charge-by-customer/action.php" method="post" id="payment-form">
+<form action="/charge-by-customer/action.php" method="post" id="payment-form" style="width: 400px;">
     <div>
         <label for="customer-id">顧客ID</label>
         <input type="text" id="customer-id" name="customer-id" placeholder="xxxxxx" />

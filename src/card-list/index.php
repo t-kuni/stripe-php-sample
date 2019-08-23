@@ -17,13 +17,13 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 <script src="https://js.stripe.com/v3/"></script>
 
-<h1>顧客IDに紐づくクレカ情報を表示します</h1>
+<h1>カード一覧</h1>
 
-<form action="/card-list/action.php" method="post" id="payment-form">
+<form action="/card-list/action.php" method="post" id="payment-form" style="width: 400px;">
     <div>
         <label for="customer-id">顧客ID</label>
         <input type="text" id="customer-id" name="customer-id" placeholder="xxxxxx" />
     </div>
 
-    <button>クレカ情報取得</button>
+    <button>カード一覧表示</button>
 </form>

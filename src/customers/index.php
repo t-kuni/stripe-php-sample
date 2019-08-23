@@ -19,7 +19,7 @@ $customers = \Stripe\Customer::all(["limit" => 10]);
 
 <script src="https://js.stripe.com/v3/"></script>
 
-<h1>顧客一覧</h1>
+<h1>顧客(Customer)一覧</h1>
 
 <table border="1" style="border-collapse: collapse">
     <tr>

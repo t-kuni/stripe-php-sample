@@ -48,7 +48,6 @@ $session = \Stripe\Checkout\Session::create([
     }
 </script>
 
-<h1>Checkout</h1>
+<h1>決済フォーム(Checkout)</h1>
 
-// 5. 決済ボタン
-<button onclick="onClick()">決済</button>
+<button onclick="onClick()">決済画面へ</button>
