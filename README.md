@@ -8,7 +8,7 @@ Dockerが動く環境が必要です。
 ## クローン
 
 ```
-git clone ssh://git@github.com/t-kuni/stripe-sample
+git clone ssh://git@github.com/t-kuni/stripe-php-sample
 cd stripe-sample
 ```
 
