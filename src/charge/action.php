@@ -13,7 +13,8 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 \Stripe\Stripe::setApiKey($secretKey);
 
-$token = $_POST['stripeToken'];
+$token  = $_POST['stripeToken'];
+$amount = $_POST['amount'];
 
 $charge = \Stripe\Charge::create([
     'amount'      => 999,
@@ -23,15 +24,13 @@ $charge = \Stripe\Charge::create([
 ]);
 ?>
 
-<h1>トークンが発行されました</h1>
-<p><?= $token ?></p>
-
-<h1>決済が完了しました。</h1>
-<pre>
-    <?php var_dump($charge) ?>
-</pre>
-
-<h1></h1>
+<h1>決済成功</h1>
+<table border="1">
+    <tr>
+        <th>クレジットカードトークン</th>
+        <td><?= $token ?></td>
+    </tr>
+</table>
 
 <div>
     <a href="/index.php">トップへ戻る</a>

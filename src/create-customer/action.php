@@ -24,15 +24,21 @@ $customer = \Stripe\Customer::create([
 ]);
 ?>
 
-<h1>トークンが発行されました</h1>
-<p><?= $token ?></p>
-<p><?= $email ?></p>
-
-<h1>顧客情報を保存しました</h1>
-<p>ID: <?= $customer->id ?></p>
-<pre>
-    <?php var_dump($customer) ?>
-</pre>
+<h1>顧客情報(Customer)が作成されました</h1>
+<table border="1">
+    <tr>
+        <th>クレジットカードトークン</th>
+        <td><?= $token ?></td>
+    </tr>
+    <tr>
+        <th>メールアドレス</th>
+        <td><?= $email ?></td>
+    </tr>
+    <tr>
+        <th>顧客ID</th>
+        <td><?= $customer->id ?></td>
+    </tr>
+</table>
 
 <div>
     <a href="/index.php">トップへ戻る</a>

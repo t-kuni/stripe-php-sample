@@ -23,9 +23,9 @@ $customers = \Stripe\Customer::all(["limit" => 10]);
 
 <table border="1" style="border-collapse: collapse">
     <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
+        <th>顧客ID</th>
+        <th>名前</th>
+        <th>メールアドレス</th>
     </tr>
     <?php foreach ($customers as $customer) { ?>
         <tr>

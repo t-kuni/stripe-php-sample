@@ -25,8 +25,7 @@ $cards = \Stripe\Customer::allSources(
 );
 ?>
 
-<h1>カード情報を取得しました</h1>
-<p>顧客ID: <?= $customerId ?></p>
+<h1>顧客(ID:<?= $customerId ?>)のカード一覧を取得しました</h1>
 
 <table border="1" style="border-collapse: collapse">
     <tr>

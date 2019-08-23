@@ -17,9 +17,9 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 <script src="https://js.stripe.com/v3/"></script>
 
-<h1>顧客情報(Customer)発行</h1>
+<h1>顧客情報(Customer)作成</h1>
 
-<form action="/save-card/action.php" method="post" id="payment-form" style="width: 400px;">
+<form action="/create-customer/action.php" method="post" id="payment-form" style="width: 400px;">
     <div class="form-row">
         <div>
             <label for="name">名前</label>
@@ -40,7 +40,7 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
         <div id="card-errors" role="alert"></div>
     </div>
 
-    <button>顧客情報発行</button>
+    <button>顧客情報作成</button>
 </form>
 
 <script>

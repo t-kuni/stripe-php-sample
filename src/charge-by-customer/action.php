@@ -24,8 +24,16 @@ $charge = \Stripe\Charge::create([
 ?>
 
 <h1>顧客IDを元に決済しました。</h1>
-<p>顧客ID: <?= $customerId ?></p>
-<p>金額: <?= $amount ?>円</p>
+<table border="1">
+    <tr>
+        <th>顧客ID</th>
+        <td><?= $customerId ?></td>
+    </tr>
+    <tr>
+        <th>金額</th>
+        <td><?= $amount ?>円</td>
+    </tr>
+</table>
 
 <div>
     <a href="/index.php">トップへ戻る</a>

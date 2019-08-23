@@ -22,8 +22,8 @@ $session = \Stripe\Checkout\Session::create([
         'currency'    => 'jpy',
         'quantity'    => 1,
     ]],
-    'success_url'          => 'https://example.com/success',
-    'cancel_url'           => 'https://example.com/cancel',
+    'success_url'          => 'https://example.com/checkout/success.php',
+    'cancel_url'           => 'https://example.com/checkout/cancel.php',
 ]);
 
 ?>

@@ -24,10 +24,17 @@ $card = \Stripe\Customer::createSource(
 );
 ?>
 
-<h1>カードを追加しました</h1>
-<p>顧客ID: <?= $customerId ?></p>
-<p>Brand: <?= $card->brand ?></p>
-<p>Last4: <?= $card->last4 ?></p>
+<h1>顧客(ID:<?= $customerId ?>)にカードを追加しました</h1>
+<table border="1">
+    <tr>
+        <th>Brand</th>
+        <td><?= $card->brand ?></td>
+    </tr>
+    <tr>
+        <th>Last4</th>
+        <td><?= $card->last4 ?></td>
+    </tr>
+</table>
 
 <div>
     <a href="/index.php">トップへ戻る</a>
