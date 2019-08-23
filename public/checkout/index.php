@@ -2,6 +2,7 @@
 
 require_once('../../vendor/autoload.php');
 
+// 1. Stripeライブラリの初期化（サーバサイド）
 $dotenv = Dotenv\Dotenv::create('../../');
 $dotenv->load();
 
@@ -10,6 +11,7 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 \Stripe\Stripe::setApiKey($secretKey);
 
+// 2. 支払いフォームを構築するリクエストをStripe APIに送信する
 $session = \Stripe\Checkout\Session::create([
     'payment_method_types' => ['card'],
     'line_items'           => [[
@@ -26,6 +28,7 @@ $session = \Stripe\Checkout\Session::create([
 
 ?>
 
+<!-- 3. Stripeライブラリの初期化（フロントエンド） -->
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
@@ -33,6 +36,7 @@ $session = \Stripe\Checkout\Session::create([
 
     var stripe = Stripe(publicKey);
 
+    // 4. 決済ボタンが押下されたら決済画面にリダイレクトする
     function onClick() {
         stripe.redirectToCheckout({
             sessionId: '<?= $session->id ?>'
@@ -44,4 +48,7 @@ $session = \Stripe\Checkout\Session::create([
     }
 </script>
 
+<h1>Checkout</h1>
+
+// 5. 決済ボタン
 <button onclick="onClick()">決済</button>

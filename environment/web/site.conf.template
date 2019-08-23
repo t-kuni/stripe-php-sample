@@ -1,0 +1,25 @@
+server {
+    listen 80;
+    listen 443 ssl;
+
+    ssl_certificate     /etc/nginx/conf.d/certs/server.crt;
+    ssl_certificate_key /etc/nginx/conf.d/certs/server.key;
+
+    server_name ${HOST};
+    root /var/www/html/public;
+
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Content-Type-Options "nosniff";
+
+    index index.html index.htm index.php;
+
+    charset utf-8;
+
+    location ~* \.php${DOLLAR} {
+        fastcgi_pass    app:9000;
+        include         fastcgi_params;
+        fastcgi_param   SCRIPT_FILENAME    ${DOLLAR}document_root${DOLLAR}fastcgi_script_name;
+        fastcgi_param   SCRIPT_NAME        ${DOLLAR}fastcgi_script_name;
+    }
+}
