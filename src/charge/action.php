@@ -14,13 +14,12 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 \Stripe\Stripe::setApiKey($secretKey);
 
 $token  = $_POST['stripeToken'];
-$amount = $_POST['amount'];
 
 $charge = \Stripe\Charge::create([
-    'amount'      => 999,
-    'currency'    => 'jpy',
-    'description' => 'Example charge',
-    'source'      => $token,
+    'amount'      => 999,              // 金額
+    'currency'    => 'jpy',            // 単位
+    'description' => 'Example charge', // 名目
+    'source'      => $token,           // クレジットカードトークン
 ]);
 ?>
 
