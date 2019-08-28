@@ -30,13 +30,13 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
             <input type="text" id="email" name="email" placeholder="email@example.com" />
         </div>
         <label for="card-element">
-            Credit or debit card
+            クレジットカード情報
         </label>
         <div id="card-element">
-            <!-- A Stripe Element will be inserted here. -->
+            <!-- ここにクレジットカード情報入力欄が挿入される -->
         </div>
 
-        <!-- Used to display Element errors. -->
+        <!-- ここにエラーメッセージが表示される -->
         <div id="card-errors" role="alert"></div>
     </div>
 

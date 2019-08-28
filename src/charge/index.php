@@ -21,14 +21,13 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 <form action="/charge/action.php" method="post" id="payment-form" style="width: 400px;">
     <div class="form-row">
-        <label for="card-element">
-            Credit or debit card
-        </label>
+        <label for="card-element">クレジットカード情報</label>
+
         <div id="card-element">
-            <!-- A Stripe Element will be inserted here. -->
+            <!-- ここにクレジットカード情報入力欄が挿入される -->
         </div>
 
-        <!-- Used to display Element errors. -->
+        <!-- ここにエラーメッセージが表示される -->
         <div id="card-errors" role="alert"></div>
     </div>
 
