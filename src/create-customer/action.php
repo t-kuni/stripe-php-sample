@@ -18,9 +18,9 @@ $email = $_POST['email'];
 $name  = $_POST['name'];
 
 $customer = \Stripe\Customer::create([
-    'source' => $token,
-    'email'  => $email,
-    'name'   => $name,
+    'source' => $token, // クレジットカードトークン
+    'email'  => $email, // メールアドレス
+    'name'   => $name,  // 顧客の名前
 ]);
 ?>
 
