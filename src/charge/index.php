@@ -40,7 +40,7 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
     var stripe = Stripe(publicKey);
     var elements = stripe.elements();
 
-    // Custom styling can be passed to options when creating an Element.
+    // スタイルのカスタマイズ
     var style = {
         base: {
             // Add your base input styles here. For example:
@@ -49,10 +49,8 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
         }
     };
 
-    // Create an instance of the card Element.
+    // クレジットカード情報入力欄の構築
     var card = elements.create('card', {style: style});
-
-    // Add an instance of the card Element into the `card-element` <div>.
     card.mount('#card-element');
 
     // 入力変更時のリスナー
