@@ -64,16 +64,17 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
     });
 
     // submit時のリスナー
-    // stripeサーバでトークンに変換してからアプリのサーバにポストする
     var form = document.getElementById('payment-form');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
+        // Stripeサーバにクレジットカード情報を送信してクレジットカードトークンを取得する
         stripe.createToken(card).then(function(result) {
             if (result.error) {
                 var errorElement = document.getElementById('card-errors');
                 errorElement.textContent = result.error.message;
             } else {
+                // クレジットカードトークンを時サーバにsubmitする
                 stripeTokenHandler(result.token);
             }
         });
