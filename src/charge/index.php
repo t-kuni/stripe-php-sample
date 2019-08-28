@@ -43,7 +43,6 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
     // スタイルのカスタマイズ
     var style = {
         base: {
-            // Add your base input styles here. For example:
             fontSize: '16px',
             color: "#32325d",
         }
