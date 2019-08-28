@@ -17,9 +17,9 @@ $customerId = $_POST['customer-id'];
 $amount     = $_POST['amount'];
 
 $charge = \Stripe\Charge::create([
-    'amount'   => $amount,
-    'currency' => 'jpy',
-    'customer' => $customerId,
+    'amount'   => $amount,     // 金額
+    'currency' => 'jpy',       // 単位
+    'customer' => $customerId, // 顧客ID
 ]);
 ?>
 
