@@ -1,8 +1,4 @@
 <?php
-/*
- * クレカ情報を保存する
- */
-
 require_once('../../vendor/autoload.php');
 
 $dotenv = Dotenv\Dotenv::create('../../');

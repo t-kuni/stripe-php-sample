@@ -1,8 +1,4 @@
 <?php
-/*
- * クレカ情報を保存する
- */
-
 require_once('../../vendor/autoload.php');
 
 $dotenv = Dotenv\Dotenv::create('../../');
@@ -15,7 +11,6 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 
 $customerId = $_POST['customer-id'];
 
-//$customer = \Stripe\Customer::retrieve($customerId);
 $cards = \Stripe\Customer::allSources(
     $customerId,
     [

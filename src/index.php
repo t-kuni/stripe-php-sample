@@ -1,12 +1,3 @@
-<?php
-/*
- * クレカ情報を保存する
- */
-
-require_once('../vendor/autoload.php');
-
-?>
-
 <ol>
     <li>
         <a href="checkout">決済フォーム(Checkout)</a>

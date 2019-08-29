@@ -1,5 +1,4 @@
 <?php
-
 require_once('../../vendor/autoload.php');
 
 // 1. Stripeライブラリの初期化（サーバサイド）
