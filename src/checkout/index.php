@@ -14,15 +14,15 @@ $publicKey = getenv('STRIPE_PUBLIC_KEY');
 $session = \Stripe\Checkout\Session::create([
     'payment_method_types' => ['card'],
     'line_items'           => [[
-        'name'        => 'T-shirt',
-        'description' => 'Comfortable cotton t-shirt',
-        'images'      => ['https://example.com/t-shirt.png'],
-        'amount'      => 500,
-        'currency'    => 'jpy',
-        'quantity'    => 1,
+        'name'        => 'T-shirt',                           // 商品名
+        'description' => 'Comfortable cotton t-shirt',        // 説明
+        'images'      => ['https://example.com/t-shirt.png'], // 画像URL
+        'amount'      => 500,                                 // 金額
+        'currency'    => 'jpy',                               // 単位
+        'quantity'    => 1,                                   // 数量
     ]],
-    'success_url'          => 'https://example.com/checkout/success.php',
-    'cancel_url'           => 'https://example.com/checkout/cancel.php',
+    'success_url'          => 'https://example.com/checkout/success.php', // 成功時リダイレクトURL
+    'cancel_url'           => 'https://example.com/checkout/cancel.php',  // 失敗時リダイレクトURL
 ]);
 
 ?>
