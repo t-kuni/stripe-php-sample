@@ -68,3 +68,7 @@ https://stripe.com/docs/payments
 
 テスト用のクレジットカード情報  
 https://stripe.com/docs/testing#cards
+
+# 終わりに
+
+お役に立てましたらスターを頂けるとうれしいです！！
