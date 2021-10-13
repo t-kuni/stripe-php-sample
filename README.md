@@ -9,13 +9,14 @@ Dockerが動く環境が必要です。
 
 ```
 git clone ssh://git@github.com/t-kuni/stripe-php-sample
-cd stripe-sample
+cd stripe-php-sample
 ```
 
 ## .envの用意
 
 ```
-cp .env.sample .env
+cp .env.example .env
+cp environment/.env.example environment/.env
 ```
 
 `.env`ファイルにStripeのパブリックキーとプライベートキーを記載します
@@ -38,7 +39,7 @@ docker-compose run --rm app composer install
 nginxとphp-fpmが起動します。
 
 ```
-docker-compose up 
+docker-compose up -d
 ```
 
 ## hostsファイル追記
@@ -46,11 +47,7 @@ docker-compose up
 ```
 example.com {dockerマシンのIPアドレス}
 ```
-windowsの場合は大体`192.168.99.100`です
-
-## SSL証明書のインストール
-
-`environment/web/certs/server.crt`を「信用できるルート証明書」として端末にインストールする。
+※dockerマシンのIPアドレスは環境により異なります
 
 ## アクセス
 
